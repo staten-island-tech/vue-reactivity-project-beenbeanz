@@ -1,12 +1,15 @@
 <template>
     <h1>Order</h1>
+    <button>Submit Order</button>
+    <img src="/riceAndSeaweed.png" alt="">
+    <img src="/crabMeat.png" alt="">
 </template>
 
 <script setup>
 
 const sushiIngredients = [
-    {name: 'Salmon', },
-    {name: 'Crab meat'},
+    {name: 'Salmon', src: '/riceAndSeaweed.png'},
+    {name: 'Crab meat', src: '/riceAndSeaweed.png'},
     {name: 'Avocado'},
     {name: 'Cucumber'}, 
     {name: 'Egg'},
