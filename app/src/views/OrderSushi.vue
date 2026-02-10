@@ -21,7 +21,7 @@ const sushiIngredients = [
     {name: 'Shrimp'},
     {name: 'Sweet potato'},
     {name: 'Cream cheese'},
-    {name: ''},
+    {name: 'Bacon'},
 
 ];
 
