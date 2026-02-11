@@ -9,7 +9,7 @@
 
 const sushiIngredients = [
     {name: 'Salmon', src: '/riceAndSeaweed.png'},
-    {name: 'Crab meat', src: '/riceAndSeaweed.png'},
+    {name: 'Crab meat', src: '/crabMeat.png'},
     {name: 'Avocado', src: '/avocado.png'},
     {name: 'Cucumber',src: '/cucumber.png'}, 
     {name: 'Egg', src: '/egg.png'},
