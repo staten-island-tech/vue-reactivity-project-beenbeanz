@@ -8,7 +8,7 @@
 <script setup>
 
 const sushiIngredients = [
-    {name: 'Salmon', src: '/riceAndSeaweed.png'},
+    {name: 'Salmon', src: '/salmon.png'},
     {name: 'Crab meat', src: '/crabMeat.png'},
     {name: 'Avocado', src: '/avocado.png'},
     {name: 'Cucumber',src: '/cucumber.png'}, 
@@ -19,14 +19,11 @@ const sushiIngredients = [
     {name: 'Tuna', src: '/tuna.png'},
     {name: 'Mango', src: '/mango.png'},
     {name: 'Shrimp', src: '/shrimp.png'},
-    {name: 'Tempura', src: '/tempura.png'},
+    {name: 'Shrimp Tempura', src: '/tempura.png'},
     {name: 'Sweet potato', src: '/sweetPotato.png'},
-    {name: 'Cream cheese'},
+    {name: 'Cream cheese', src: 'creamCheese.png'},
     {name: 'Bacon', src: '/bacon.png'},
-
 ];
-
-
 </script>
 
 <style scoped>
