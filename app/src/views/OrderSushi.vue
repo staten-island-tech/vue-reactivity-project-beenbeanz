@@ -17,11 +17,12 @@ const sushiIngredients = [
     {name: 'Peanuts', src: '/peanuts.png'},
     {name: 'Squid', src: '/squid.png'},
     {name: 'Tuna', src: '/tuna.png'},
-    {name: 'Mango'},
-    {name: 'Shrimp'},
-    {name: 'Sweet potato'},
+    {name: 'Mango', src: '/mango.png'},
+    {name: 'Shrimp', src: '/shrimp.png'},
+    {name: 'Tempura', src: '/tempura.png'},
+    {name: 'Sweet potato', src: '/sweetPotato.png'},
     {name: 'Cream cheese'},
-    {name: 'Bacon'},
+    {name: 'Bacon', src: '/bacon.png'},
 
 ];
 
