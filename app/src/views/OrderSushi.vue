@@ -1,13 +1,20 @@
 <template>
     <h1>Order</h1>
-    <button>Submit Order</button>
+    <div class="ingredientsContainer">
+        <IngredientButton @click="order(ingredient)" v-for="ingredient in sushiIngredients" :key="ingredient.name" :ingredient = 'ingredient'>
+        </IngredientButton>
+    </div>
+    <RouterLink to="/make-sushi">
+        <button >Submit Order</button>
+    </RouterLink>
+    
     <img src="/riceAndSeaweed.png" alt="">
-    <img src="/crabMeat.png" alt="">
 </template>
 
 <script setup>
-
-const sushiIngredients = [
+import { ref, reactive } from 'vue';
+import IngredientButton from '@/components/IngredientButton.vue';
+const sushiIngredients = ref([
     {name: 'Salmon', src: '/salmon.png'},
     {name: 'Crab meat', src: '/crabMeat.png'},
     {name: 'Avocado', src: '/avocado.png'},
@@ -23,7 +30,16 @@ const sushiIngredients = [
     {name: 'Sweet potato', src: '/sweetPotato.png'},
     {name: 'Cream cheese', src: 'creamCheese.png'},
     {name: 'Bacon', src: '/bacon.png'},
-];
+]);
+
+const orderedIngredients = ref([])
+//const ingredient = reactive({name: '', src: ''})
+function order(ingredient){
+    orderedIngredients.value.push(ingredient)
+    console.log(orderedIngredients.value)
+}
+
+
 </script>
 
 <style scoped>

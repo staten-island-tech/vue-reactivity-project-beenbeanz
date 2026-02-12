@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import OrderSushi from '@/views/OrderSushi.vue'
+import MakeSushi from '@/views/MakeSushi.vue'
 
 
 const router = createRouter({
@@ -9,6 +10,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: OrderSushi
+    },
+    {
+      path: '/make-sushi',
+      name: 'make-sushi',
+      component: MakeSushi
     }
   ],
 })
