@@ -1,11 +1,16 @@
 <template>
-    <h1>Order</h1>
+    <h1 id="header">~ place your order ~</h1>
     <div class="ingredientsContainer">
-        <IngredientButton @click="order(ingredient)" v-for="ingredient in sushiIngredients" :key="ingredient.name" :ingredient = 'ingredient'>
+        <IngredientButton 
+            @click="order(ingredient)" 
+            v-for="ingredient in sushiIngredients" 
+            :key="ingredient.name" 
+            :ingredient = 'ingredient'
+            class="ingredientBtn">
         </IngredientButton>
     </div>
     <RouterLink to="/make-sushi">
-        <button >Submit Order</button>
+        <button id="submitBtn">Submit Order</button>
     </RouterLink>
 </template>
 
@@ -33,10 +38,32 @@ const sushiIngredients = [
 
 function order(ingredient){
     orderedIngredients.value.push(ingredient)
-    console.log(orderedIngredients.value)
 }
 </script>
 
 <style scoped>
-
+#header{
+    text-align: center;
+}
+.ingredientBtn{
+    gap: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+}
+.ingredientsContainer{
+    max-width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#submitBtn{
+    border-radius: 4px;
+    width: 20%;
+    height: 30px;
+    margin: auto;
+    display: block;
+    margin-top: 10px;
+}
 </style>
