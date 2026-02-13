@@ -2,15 +2,18 @@
     <div id="container">
         <div id="imageContainer">
             <img src="/riceAndSeaweed.png" id='bottomImg'alt="mat with sushi and rice on top">
-            <img 
-                v-for="(ingredient, index) in placedIngredients" 
-                :key="ingredient.name + index"
-                :src="ingredient.src" 
-                :alt="ingredient.name"
-                :style="{ zIndex: index + 1}"
-                class="overlayImage"
-            />
-        </div>
+            </div>
+            <div id="overlayImgDiv">
+                <img 
+                    v-for="(ingredient, index) in placedIngredients" 
+                    :key="ingredient.name + index"
+                    :src="ingredient.src" 
+                    :alt="ingredient.name"
+                    :style="{ zIndex: index + 1}"
+                    class="overlayImage"
+                />
+            </div>
+       
         <div id="ingredientsList">
             <IngredientButton
                 class="ingredientBtn"
@@ -38,22 +41,27 @@
 <style scoped>
 #imageContainer{
     position: relative;
-    display: inline-block;
-    width: 100%;
+    width: 20%;
 }
 #bottomImg{
     z-index: 0;
     height: auto;
     display: block;
-    max-width: 100%;
-    position: relative;
+    width: 100%;
+}
+#overlayImgDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    pointer-events: none;
 }
 .overlayImage{
     top: 0;
     left: 0;
-    z-index: 1;
-    width: 75%;
-    height: 75%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     object-fit: contain;
 }
@@ -65,4 +73,5 @@
 .ingredientBtn{
     cursor: pointer;
 }
+
 </style>
