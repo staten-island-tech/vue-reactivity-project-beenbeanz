@@ -17,7 +17,7 @@
         <div id="ingredientsList">
             <IngredientButton
                 class="ingredientBtn"
-                @click = "addIngredient(ingredient)"
+                @click = "addIngredient(ingredient), removeBtn(ingredient)"
                 v-for="(ingredient, index) in orderedIngredients"
                 :key="ingredient.name + index"
                 :ingredient="ingredient"
@@ -34,11 +34,16 @@
     const placedIngredients = ref([]);
 
     function addIngredient(ingredient){
-        placedIngredients.value.push(ingredient)
+        placedIngredients.value.push(ingredient);
+    }
+    //FINISH THIS
+    function removeBtn(ingredient){
+
     }
 </script>
 
 <style scoped>
+
 #imageContainer{
     position: relative;
     width: 20%;
@@ -53,8 +58,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 200px;
-    height: 100px;
+    width: 325px;
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 20px;
     pointer-events: none;
 }
 .overlayImage{
