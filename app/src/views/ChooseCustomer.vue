@@ -1,6 +1,6 @@
 <template>
     <h1 id="header">~ choose your customer ~</h1>
-    <div id="container">
+   <div id="container">
         <CustomerButton
             v-for="character in customerList" 
             :key="character.name"
@@ -22,7 +22,7 @@
     const customerList = [
         {name: 'Bekzat', src: '/bekzat.png'},
         {name: 'Evelynn', src: '/Evelynn.webp'},
-        {name: 'Farmer Cletus', src: '/Farmer_Cletus.webp'},
+        {name: 'Farmer Cletus', src: '/Farmer_Cletus.webp'}
     ];
 
     function selectCharacter(character){
@@ -44,5 +44,4 @@
     .characterImg:hover{
         background-color: gray;
     }
-
 </style>
