@@ -27,7 +27,7 @@
 
     function selectCharacter(character){
         customer.value = character;
-        console.log(customer.value)
+        console.log(customer.value.src)
 
     }
 </script>
