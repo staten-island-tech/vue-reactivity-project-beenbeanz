@@ -1,14 +1,16 @@
 <template>
     <button class="card" type="button">
-        <h2>{{ character.name }}</h2>
-        <img :src="character.src" alt="character">
+        <h2>{{ customer.name }}</h2>
+        <img :src="customer.src" alt="">
     </button>
 </template>
 
 <script setup>
+import { customer } from '@/stores/store';
+
 
 defineProps({
-    character: {
+    ingredient: {
         type: Object,
         required: true
     }
