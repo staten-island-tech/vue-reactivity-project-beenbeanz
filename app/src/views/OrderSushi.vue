@@ -16,7 +16,6 @@
 
 <script setup>
 import { orderedIngredients } from '@/stores/store';
-import { ref, reactive } from 'vue';
 import IngredientButton from '@/components/IngredientButton.vue';
 const sushiIngredients = [
     {name: 'Salmon', src: '/salmon.png'},
@@ -50,6 +49,10 @@ function order(ingredient){
     margin: 10px;
     border-radius: 5px;
     border: none;
+}
+.ingredientBtn:hover{
+    background-color: gray;
+    cursor: pointer;
 }
 .ingredientsContainer{
     max-width: 90%;
