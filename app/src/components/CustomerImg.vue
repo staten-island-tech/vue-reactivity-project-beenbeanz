@@ -1,10 +1,14 @@
 <template>
-    <img :src="customer.value.src" alt="">
+    <img :src="customer.src" :alt="customer.name">
 </template>
 
 <script>
-    import { customer } from '@/stores/store';
-
+    defineProps({
+        customer: {
+            type: Object,
+            required: true
+        }
+    })
 </script>
 
 <style scoped>

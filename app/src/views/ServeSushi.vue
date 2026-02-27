@@ -1,9 +1,13 @@
 <template>
-   <button></button>
+   <CustomerImg
+   v-for="customer in customers"
+   :key="customer.name"
+   :customer="customer"
+   ></CustomerImg>
 </template>
 
 <script>
-import { customer } from '@/stores/store';
+import { customers } from '@/stores/store';
 import CustomerImg from '@/components/CustomerImg.vue';
 
 </script>

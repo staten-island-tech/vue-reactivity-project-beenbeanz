@@ -1,4 +1,4 @@
 import { ref } from 'vue'
 
 export const orderedIngredients = ref([])
-export const customer = ref([])
+export const customers = ref([])
