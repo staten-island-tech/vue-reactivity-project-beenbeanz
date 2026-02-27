@@ -1,12 +1,13 @@
 <template>
    <CustomerImg
-   v-for="customer in customers"
-   :key="customer.name"
-   :customer="customer"
-   ></CustomerImg>
+      v-for="customer in customers"
+      :customer="customer"
+      :key="customer.name"
+      :src="customer.src"
+   />
 </template>
 
-<script>
+<script setup>
 import { customers } from '@/stores/store';
 import CustomerImg from '@/components/CustomerImg.vue';
 

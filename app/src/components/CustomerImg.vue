@@ -2,7 +2,7 @@
     <img :src="customer.src" :alt="customer.name">
 </template>
 
-<script>
+<script setup>
     defineProps({
         customer: {
             type: Object,

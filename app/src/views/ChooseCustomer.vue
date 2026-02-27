@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-    import { customer } from '@/stores/store';
+    import { customers } from '@/stores/store';
     import CustomerButton from '@/components/CustomerButton.vue';
     const customerList = [
         {name: 'Bekzat', src: '/bekzat.png'},
@@ -26,9 +26,7 @@
     ];
 
     function selectCharacter(character){
-        customer.value = character;
-        console.log(customer.value.src)
-
+        customers.value.push(character);
     }
 </script>
 
