@@ -26,7 +26,8 @@
     ];
 
     function selectCharacter(character){
-        customers.value.push(character);
+        customers.value.push(character)
+
     }
 </script>
 

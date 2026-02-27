@@ -5,6 +5,8 @@
       :key="customer.name"
       :src="customer.src"
    />
+   <button id="serveBtn">serve dish</button>
+   <img @click='isVisible' isVisible='false' id='sushiImg' src="/sushi.jpg" alt="sushi plate">
 </template>
 
 <script setup>
@@ -14,5 +16,7 @@ import CustomerImg from '@/components/CustomerImg.vue';
 </script>
 
 <style scoped>
-
+   #sushiImg{
+      height: 350px;
+   }
 </style>
