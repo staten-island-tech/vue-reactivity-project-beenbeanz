@@ -5,7 +5,7 @@
       :key="customer.name"
       :src="customer.src"
    />
-   <button id="serveBtn">serve dish</button>
+   <button id="serveBtn" @click="serveDish">serve dish</button>
    <img @click='isVisible' isVisible='false' id='sushiImg' src="/sushi.jpg" alt="sushi plate">
 </template>
 
@@ -13,6 +13,10 @@
 import { customers } from '@/stores/store';
 import CustomerImg from '@/components/CustomerImg.vue';
 
+function serveDish(){
+   
+
+}
 </script>
 
 <style scoped>

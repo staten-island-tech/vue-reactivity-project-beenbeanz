@@ -23,6 +23,7 @@
                 :ingredient="ingredient"
             />
         </div>
+        
         <RouterLink to="/serve-sushi">
             <button id="submitBtn">Serve Sushi</button>
         </RouterLink>
