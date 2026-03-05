@@ -20,14 +20,13 @@
     import { customers } from '@/stores/store';
     import CustomerButton from '@/components/CustomerButton.vue';
     const customerList = [
-        {name: 'Bekzat', src: '/bekzat.png'},
-        {name: 'Evelynn', src: '/Evelynn.webp'},
-        {name: 'Farmer Cletus', src: '/Farmer_Cletus.webp'}
+        {name: 'Bekzat', src: '/bekzat.png', diag:  'I am big papi!'},
+        {name: 'Evelynn', src: '/Evelynn.webp', diag: 'Wow thank you so much for this amazing sushi i will gobble wobble hobble it up!'},
+        {name: 'Farmer Cletus', src: '/Farmer_Cletus.webp', diag: 'These might even be better than my melons and carrots!'}
     ];
 
     function selectCharacter(character){
         customers.value.push(character)
-
     }
 </script>
 

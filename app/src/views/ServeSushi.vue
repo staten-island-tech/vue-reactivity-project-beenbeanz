@@ -1,7 +1,12 @@
 <template>
-   <p class="customerDiag" v-show="isVisible">Wow thank you so much for this amazing sushi i will gobble wobble hobble it up!</p>
-   <p class="customerDiag" v-show="isVisible">These might even be better than my melons and carrots!</p>
-   <p class="customerDiag" v-show="isVisible">I am big papi!</p>
+   <p
+      class="customerDiag"
+      v-for="customer in customers"
+      :key="customer.name"
+      v-show="isVisible && customers.some(c => c.name === customer.name)"
+   >
+   {{ customer.diag }}
+   </p>
 
    <CustomerImg
       v-for="customer in customers"

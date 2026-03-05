@@ -9,6 +9,11 @@
             class="ingredientBtn">
         </IngredientButton>
     </div>
+
+    <div>
+        <h2>cart</h2>
+    </div>
+
     <RouterLink to="/make-sushi">
         <button id="submitBtn">Submit Order</button>
     </RouterLink>
