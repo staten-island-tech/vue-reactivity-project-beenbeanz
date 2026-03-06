@@ -12,6 +12,9 @@
 
     <div>
         <h2>cart</h2>
+        <IngredientCart
+            
+        />
     </div>
 
     <RouterLink to="/make-sushi">
@@ -22,6 +25,7 @@
 <script setup>
 import { orderedIngredients } from '@/stores/store';
 import IngredientButton from '@/components/IngredientButton.vue';
+import IngredientCart from '@/components/IngredientCart.vue';
 const sushiIngredients = [
     {name: 'Salmon', src: '/salmon.png'},
     {name: 'Crab meat', src: '/crabMeat.png'},
