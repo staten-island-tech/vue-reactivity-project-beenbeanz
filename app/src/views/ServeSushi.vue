@@ -3,7 +3,7 @@
       class="customerDiag"
       v-for="customer in customers"
       :key="customer.name"
-      v-show="isVisible && customers.some(c => c.name === customer.name)"
+      v-show="isVisible && customers.some(character => character.name === customer.name)"
    >
    {{ customer.diag }}
    </p>

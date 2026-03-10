@@ -38,11 +38,8 @@
     const placedIngredients = ref([]);
 
     function addIngredient(ingredient){
-        placedIngredients.value.push(ingredient);
-    }
-    //FINISH THIS
-    function removeBtn(ingredient){
-
+        if(placedIngredients.value.find(ing => ing.name === ingredient.name)) return;
+        else placedIngredients.value.push(ingredient);
     }
 </script>
 

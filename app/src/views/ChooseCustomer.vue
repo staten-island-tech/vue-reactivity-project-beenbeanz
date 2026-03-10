@@ -26,7 +26,8 @@
     ];
 
     function selectCharacter(character){
-        customers.value.push(character)
+        if(customers.value.find(char => char.name === character.name)) return;
+        else customers.value.push(character)
     }
 </script>
 

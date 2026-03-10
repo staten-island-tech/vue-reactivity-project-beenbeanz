@@ -11,9 +11,12 @@
     </div>
 
     <div>
-        <h2>cart</h2>
+        <h2 id="cartHeader">cart</h2>
         <IngredientCart
-            
+            v-for="ingredient in orderedIngredients"
+            :key = "ingredient.name"
+            :ingredient="ingredient"
+            class="ingredientInCart"
         />
     </div>
 
@@ -45,7 +48,8 @@ const sushiIngredients = [
 ];
 
 function order(ingredient){
-    orderedIngredients.value.push(ingredient)
+    if(orderedIngredients.value.find(ing => ing.name === ingredient.name)) return;
+    else orderedIngredients.value.push(ingredient)
 }
 </script>
 
@@ -77,5 +81,14 @@ function order(ingredient){
     margin: auto;
     display: block;
     margin-top: 10px;
+}
+.ingredientInCart{
+    gap: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+}
+#cartHeader{
+    font-size: 2.5rem;
 }
 </style>
