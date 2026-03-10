@@ -17,7 +17,7 @@
         <div id="ingredientsList">
             <IngredientButton
                 class="ingredientBtn"
-                @click = "addIngredient(ingredient), removeBtn(ingredient)"
+                @click = "addIngredient(ingredient)"
                 v-for="(ingredient, index) in orderedIngredients"
                 :key="ingredient.name + index"
                 :ingredient="ingredient"
